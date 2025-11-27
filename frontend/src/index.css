@@ -2,9 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-padding-top: 10px;
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
+
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom right, #dbeafe, #c7d2fe);
+}
+
 .page-enter {
   opacity: 0;
   transform: translateY(20px);
