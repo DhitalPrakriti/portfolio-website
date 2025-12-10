@@ -370,7 +370,7 @@ function App() {
               </div>
               <div className="flex gap-4">
                 <a 
-                  href="https://github.com/DhitalPrakriti/PacketAnalyzer" 
+                  href="https://github.com/DhitalPrakriti/Network-Packet-Analyzer" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
@@ -577,7 +577,7 @@ function App() {
                     <div className="w-8 h-8 bg-green-100 dark:bg-green-800 rounded-full flex items-center justify-center">
                       <span className="text-green-600 dark:text-green-400 text-sm">🎓</span>
                     </div>
-                    <span className="text-gray-700 dark:text-gray-300">FDU Vancouver - Expected 2025</span>
+                    <span className="text-gray-700 dark:text-gray-300">FDU Vancouver - Expected 2026</span>
                   </div>
                 </div>
               </div>
