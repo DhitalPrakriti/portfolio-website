@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 const emptyForm = {
   title: '',
@@ -26,7 +26,7 @@ function AdminProjectsSection() {
 
   const apiBase = process.env.REACT_APP_API_BASE || '';
 
-  const loadProjects = async () => {
+  const loadProjects = useCallback(async () => {
     try {
       setError('');
       const response = await fetch(`${apiBase}/api/projects`);
@@ -40,11 +40,11 @@ function AdminProjectsSection() {
     } catch (err) {
       setError('Unable to load projects.');
     }
-  };
+  }, [apiBase]);
 
   useEffect(() => {
     loadProjects();
-  }, []);
+  }, [loadProjects]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
