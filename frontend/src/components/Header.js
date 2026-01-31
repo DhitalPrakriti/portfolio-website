@@ -1,7 +1,7 @@
 // src/components/Header.js
 import React, { useState } from 'react';
 
-const Header = ({ darkMode, setDarkMode }) => {
+const Header = ({ darkMode, setDarkMode, adminEnabled }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId) => {
@@ -25,6 +25,7 @@ const Header = ({ darkMode, setDarkMode }) => {
   };
 
   const navItems = ['home', 'about', 'projects', 'achievements', 'contact'];
+  const mobileAdminItems = adminEnabled ? ['admin'] : [];
 
   return (
     <header className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 fixed top-0 left-0 right-0 z-50 transition-colors duration-300">
@@ -107,6 +108,16 @@ const Header = ({ darkMode, setDarkMode }) => {
                   href={`#${section}`}
                   onClick={(e) => handleNavClick(e, section)}
                   className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors capitalize py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 text-base"
+                >
+                  {section}
+                </a>
+              ))}
+              {mobileAdminItems.map((section) => (
+                <a
+                  key={section}
+                  href={`#${section}`}
+                  onClick={(e) => handleNavClick(e, section)}
+                  className="text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 font-semibold transition-colors capitalize py-3 px-4 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/30 text-base"
                 >
                   {section}
                 </a>
