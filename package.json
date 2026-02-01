@@ -1,0 +1,7 @@
+{
+  "name": "portfolio-website",
+  "private": true,
+  "dependencies": {
+    "mongoose": "^8.7.0"
+  }
+}
