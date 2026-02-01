@@ -103,7 +103,7 @@ function ProjectsSection() {
                     className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
                   >
                     <span>View Code</span>
-                    <span>â†’</span>
+                    <span aria-hidden="true">&rarr;</span>
                   </a>
                 )}
                 {project.liveUrl && (
@@ -114,7 +114,7 @@ function ProjectsSection() {
                     className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
                   >
                     <span>Live Demo</span>
-                    <span>â†’</span>
+                    <span aria-hidden="true">&rarr;</span>
                   </a>
                 )}
               </div>
@@ -135,7 +135,7 @@ function ProjectsSection() {
           className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors px-6 py-3 border-2 border-blue-600 dark:border-blue-400 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white dark:hover:text-white transition-all duration-300"
         >
           <span>View All Projects on GitHub</span>
-          <span>â†’</span>
+          <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
     </section>
